@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Recipe page</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: rgb(253, 248, 252);
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+    }
+    .container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    
+    .container {
+      width: 600px;
+      padding: 40px;
+      border-radius: 8px;
+      background-color: white;
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center the items horizontally */
+    }
+    .list {
+      background-color:rgb(253, 248, 252);
+      padding: 8px 0px 10px 20px;
+      border-radius: 8px;
+    }
+
+    /* Adjust the margin for the list and title */
+    .list h3 {
+      color: brown;
+      margin-bottom: 5px; /* Reduce space between title and list */
+    }
+
+    .list ul {
+      padding-left: 20px; /* Reduce the padding to move dots to the left */
+    }
+
+    .list li {
+      padding-bottom: 7px;
+    }
+
+    .sec-list h2 {
+      margin-bottom: 2px; /* Reduce space between the title and the list */
+      color: brown;
+    }
+
+    .sec-list ul {
+      padding-left: 25px; /* Move the dots further to the left */
+    }
+
+    .sec-list li {
+      padding-bottom: 5px;
+      padding-left: 8px;
+    }
+
+    /* Common styles for ordered list */
+    .third-list h2 {
+      margin-bottom: 2px; /* Reduce space between the title and the list */
+      color: brown; /* Matching the color of the title */
+    }
+
+    .third-list ol {
+      padding-left: 25px; /* Same padding as second list */
+      /*color: brown;  */
+    }
+
+    .third-list li {
+      padding-bottom: 8px;
+      padding-left: 8px; /* Same padding as second list */
+    }
+
+    .last h2 {
+      color: brown;
+    }
+/* Style for unordered list markers */
+.list ul li::marker,
+.sec-list ul li::marker,
+.third-list ol li::marker
+{
+  color: brown; /* Match the color of the title */
+}
+.number {
+  color: brown; 
+}
+
+
+    /* Line after each table row */
+    table {
+      border-spacing: 10px; /* Space between table cells */
+      width: 100%;
+      
+    }
+    
+    .last table tr {
+      box-shadow: 0 1px 0 0 rgb(197, 197, 197); /* Simulate a line under the row */
+      
+    }
+    table td {
+      padding-bottom: 10px;
+      padding-left: 15px;
+    }
+
+    
+    .last table tr:last-child {
+      box-shadow: none; /* Remove shadow after the last row */
+    }
+    
+
+    /* Style for the overall container */
+    .line {
+      background-color: rgb(202, 201, 201);
+      width: 620px;
+      height: 1px;
+      margin: 8px;
+    }
+    /* Media queries for small screens (sm) */
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .list, .sec-list, .third-list, .last {
+    width: 100%;
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  .line {
+    width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .sec-list ul, .third-list ol {
+    padding-left: 15px;
+  }
+
+  .list ul, .sec-list ul, .third-list ol {
+    padding-left: 15px;
+  }
+}
+
+/* Media queries for medium screens (md) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .list, .sec-list, .third-list, .last {
+    width: 100%;
+  }
+
+  .container img {
+    width: 100%;
+  }
+
+  .line {
+    width: 100%;
+  }
+
+  table {
+    font-size: 16px;
+  }
+
+  .sec-list ul, .third-list ol {
+    padding-left: 20px;
+  }
+
+  .list ul, .sec-list ul, .third-list ol {
+    padding-left: 20px;
+  }
+}
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <img src="./assets/images/image-omelette.jpeg" alt="burger">
+  <div class="sec-cont">
+    <h1>Simple Omelette Recipe</h1>
+    <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+      to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+    </p>
+    <div class="list">
+      <h3>Preparation time</h3>
+      <ul> 
+        <li>Total: Approximately 10 minutes</li>
+        <li>Preparation: 5 minutes</li>
+        <li>Cooking: 5 minutes</li>
+      </ul>
+    </div>
+    <div class="sec-list">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+    </div>
+    <div class="line"></div>
+    <div class="third-list">
+      <h2>Instructions</h2>
+      <ol>
+        <li> <b>Beat the eggs: </b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.
+          You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><b>Heat the pan: </b> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li><b>Cook the omelette: </b>Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+          the eggs evenly coat the surface.</li>
+        <li><b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the 
+          middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li><b>Fold and serve: </b> As the omelette continues to cook, carefully lift one edge and fold it over the 
+          fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li><b>Enjoy: </b>Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+    </div>
+    <div class="line"></div>
+    <div class="last">
+      <h2>Nutrition</h2>
+      <p> The table below shows nutritional values per serving without the additional fillings.</p>
+      <table>
+        <tr>
+          <td>Calories</td>
+          <td><span class="number">277kcal</span></td>
+        </tr>
+        <tr>
+          <td>Carbs</td>
+          <td><span class="number">0g</span></td>
+        </tr>
+        <tr>
+          <td>Protein</td>
+          <td><span class="number">20g</span></td>
+        </tr>
+        <tr>
+          <td>Fat</td>
+          <td><span class="number">22g</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
